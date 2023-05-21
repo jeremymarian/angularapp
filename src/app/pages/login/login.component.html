@@ -1,0 +1,32 @@
+<!-- eslint-disable prettier/prettier -->
+<div class="d-flex justify-content-center">
+  <form
+    class="loginform"
+    [formGroup]="loginForm"
+    (ngSubmit)="login(loginForm)">
+    <div class="container">
+      <h1 class="logtitle">Welcome</h1>
+      <hr class="solid" />
+
+      <mat-form-field appearance="outline">
+        <mat-label for="user">User</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="email"
+          placeholder="Username" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label for="user">Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          placeholder="Password" />
+      </mat-form-field>
+      <br />
+      <button mat-raised-button type="submit">Log-in</button>
+    </div>
+  </form>
+</div>

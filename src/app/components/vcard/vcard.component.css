@@ -1,0 +1,11 @@
+.example-card {
+    width: 300px;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://dev.pokemontcg.io/assets/gengar-f6f6386fe487d0606d6e87339a983c651605321fba4bdfea5780ce117f38b29e.png');
+    background-size: cover;
+  }
+

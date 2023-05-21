@@ -1,0 +1,50 @@
+<!-- eslint-disable prettier/prettier -->
+<div class="d-flex justify-content-center">
+  <form
+    class="signInForm"
+    [formGroup]="signForm"
+    (ngSubmit)="onSubmit(signForm)">
+    <div class="container">
+      <h1 class="logtitle">Join us!</h1>
+      <hr class="solid" />
+
+      <mat-form-field appearance="outline">
+        <mat-label for="name">Name</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="name"
+          placeholder="Name" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label for="lastname">Lastname</mat-label>
+        <input
+          matInput
+          formControlName="lastname"
+          type="text"
+          placeholder="Lastname" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label for="email">User</mat-label>
+        <input
+          matInput
+          formControlName="email"
+          type="text"
+          placeholder="User" />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label for="password">Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          placeholder="Password" />
+      </mat-form-field>
+      <br />
+      <button mat-raised-button type="submit">Sign-in</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+.center {
+display: flex;
+justify-content: center;
+padding-bottom: 5vh;
+}
+
+.row{
+    justify-content: center;
+}
+
+.vcard{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-content: center;
+   
+}

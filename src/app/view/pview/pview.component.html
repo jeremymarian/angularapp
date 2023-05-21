@@ -1,0 +1,157 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="position-name">
+      <h2
+        [ngClass]="{
+          'example-app-name': title.includes('Welcome to my portfolio'),
+          'example-app-name1': title.includes('Login Section'),
+          'example-app-name2': title.includes('Sign up Section'),
+          'example-app-name3': title.includes('Cards Section')
+        }">
+        {{ title }}
+      </h2>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container
+    class="example-sidenav-container"
+    [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav
+      #snav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list>
+        <mat-button-toggle-group class="btn-group">
+          <mat-button-toggle
+            *ngIf="isLoad"
+            (click)="handleClickLogin($event)"
+            routerLink="/login"
+            class="toogle-button">
+            <mat-icon>login</mat-icon>
+            Login
+          </mat-button-toggle>
+          <mat-button-toggle
+            *ngIf="isNotLoad"
+            (click)="handleClickSignUp($event)"
+            routerLink="/signup"
+            class="toogle-button">
+            <mat-icon>how_to_reg</mat-icon>
+            Sign up
+          </mat-button-toggle>
+          <mat-button-toggle
+            *ngIf="isLoad"
+            routerLink="/cards"
+            (click)="handleClickCards($event)"
+            class="toogle-button">
+            <mat-icon>filter_none</mat-icon>
+            Cards
+          </mat-button-toggle>
+          <mat-button-toggle
+            *ngIf="isLoad"
+            (click)="handleClickLogin($event)"
+            routerLink="/login"
+            class="toogle-button">
+            <mat-icon>app</mat-icon>
+            Profile
+          </mat-button-toggle>
+          <mat-button-toggle
+            *ngIf="isLoad"
+            (click)="handleClickLogin($event)"
+            routerLink="/login"
+            class="toogle-button">
+            <mat-icon>app</mat-icon>
+            My cart
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="principal">
+      <div class="my-container">
+        <div class="my-box">
+          <p class="my-text">
+            Desarrollador Full Stack apasionado con sólida experiencia en la
+            creación de soluciones innovadoras. Certificado en tecnologías clave
+            como Angular, React, Node.js y MySQL. Combino habilidades técnicas
+            con conocimientos en recursos humanos, lo que me brinda una
+            perspectiva única en la gestión de equipos y en la creación de
+            ambientes laborales eficientes. Mi enfoque se centra en desarrollar
+            aplicaciones web funcionales, intuitivas y visualmente atractivas
+            que superen las expectativas de los clientes. Si buscas un
+            profesional comprometido y creativo para tus proyectos, estoy listo
+            para asumir nuevos desafíos y contribuir al éxito de tus metas.
+          </p>
+        </div>
+      </div>
+
+      <div class="containerr">
+        <h2 class="container-heading">My skills</h2>
+      </div>
+
+      <div class="my-list">
+        <ul>
+          <li class="my-item">
+            Lenguajes de programación:
+            <span class="my-highlight">JavaScript (ES6+)</span>
+          </li>
+          <li class="my-item">
+            Desarrollo web: <span class="my-highlight">HTML5</span>,
+            <span class="my-highlight">CSS3</span>,
+            <span class="my-highlight">Sass/SCSS</span>
+          </li>
+          <li class="my-item">
+            Frameworks frontend: <span class="my-highlight">React.js</span>,
+            <span class="my-highlight">Angular</span>
+          </li>
+          <li class="my-item">
+            Frameworks backend: <span class="my-highlight">Node.js</span>,
+            <span class="my-highlight">Express.js</span>
+          </li>
+          <li class="my-item">
+            Bases de datos: <span class="my-highlight">MySQL</span>,
+            <span class="my-highlight">MongoDB</span>,
+            <span class="my-highlight">PostgreSQL</span>
+          </li>
+          <li class="my-item">
+            Control de versiones: <span class="my-highlight">Git</span>,
+            <span class="my-highlight">GitHub</span>
+          </li>
+          <li class="my-item">
+            Entorno de desarrollo:
+            <span class="my-highlight">Visual Studio Code</span>
+          </li>
+          <li class="my-item">
+            Gestor de paquetes: <span class="my-highlight">npm</span>
+          </li>
+          <li class="my-item">
+            Estilos y UI: <span class="my-highlight">Bootstrap</span>,
+            <span class="my-highlight">Material-UI</span>
+          </li>
+          <li class="my-item">
+            Pruebas y calidad del código:
+            <span class="my-highlight">Jest</span>,
+            <span class="my-highlight">Enzyme</span>,
+            <span class="my-highlight">ESLint</span>
+          </li>
+          <li class="my-item">
+            Metodologías ágiles: <span class="my-highlight">Scrum</span>
+          </li>
+          <li class="my-item">Diseño y desarrollo responsivo</li>
+          <li class="my-item">API RESTful y arquitectura de microservicios</li>
+          <li class="my-item">
+            Autenticación y autorización:
+            <span class="my-highlight">JWT (JSON Web Tokens)</span>
+          </li>
+          <li class="my-item">
+            Conocimientos básicos de Docker y contenedores
+          </li>
+        </ul>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

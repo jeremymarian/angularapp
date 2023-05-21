@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.my-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.my-box {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 600px;
+  width: 100%;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.my-text {
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    }
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  .example-toolbar{
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  } 
+  .example-app-name{
+    margin-left: 20px;
+    margin-top: 14px;
+    transform: translateX(-200%);
+    opacity: 0;
+    animation: slide-in-anim 1.5s  alternate ease-out forwards ;}
+  
+    @keyframes slide-in-anim {
+      20% {
+        opacity: 0;
+      }
+      60% {
+        transform: translateX(-45%);
+      }
+      75% {
+        transform: translateX(-51%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(-50%);
+      }
+  }
+  .example-app-name1{
+    margin-left: 20px;
+    margin-top: 14px;
+    transform: translateX(-200%);
+    opacity: 0;
+    animation: slide-in-animl 1.5s  ease-out forwards ;}
+    @keyframes slide-in-animl {
+      20% {
+        opacity: 0;
+      }
+      60% {
+        transform: translateX(-45%);
+      }
+      75% {
+        transform: translateX(-51%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(-50%);
+      }
+  }
+  .example-app-name2{ 
+    margin-left: 20px;
+    margin-top: 14px;
+    transform: translateX(-200%);
+    opacity: 0;
+    animation: slide-in-animd 1.5s  ease-out forwards ;}
+    @keyframes slide-in-animd {
+      20% {
+        opacity: 0;
+      }
+      60% {
+        transform: translateX(-45%);
+      }
+      75% {
+        transform: translateX(-51%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(-50%);
+      }
+  }
+  .example-app-name3{ 
+    margin-left: 20px;
+    margin-top: 14px;
+    transform: translateX(-200%);
+    opacity: 0;
+    animation: slide-in-animc 1.5s   ease-out forwards ;}
+    @keyframes slide-in-animc {
+      20% {
+        opacity: 0;
+      }
+      60% {
+        transform: translateX(-45%);
+      }
+      75% {
+        transform: translateX(-51%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(-50%);
+      }
+  }
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  .position-name {
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+text-align: center;
+  }
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    border: 0ch;
+  }
+
+.my-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.my-item {
+  margin-bottom: 10px;
+}
+
+.my-highlight {
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+
+.containerr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+  position: relative;
+  bottom: 20px;
+  padding: 5vh;
+  margin-bottom: 50px;
+  box-shadow: 0px 2px 6px rgba(41, 182, 234, 0.305);
+  border-radius: 5px;
+  transform: translateY(50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+}
+
+.principal{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: moveAnimation 1s infinite alternate;
+}
+
+@keyframes moveAnimation {
+  0% { transform: translateX(-10px); }
+  100% { transform: translateX(10px); }
+}

@@ -1,0 +1,11 @@
+<ngb-carousel
+  class="slider-width"
+  *ngIf="cards"
+  [showNavigationIndicators]="false">
+  <ng-template *ngFor="let card of cards" ngbSlide>
+    <div class="slider-gross">
+      <img [lazyLoad]="card.images.small" alt="Random slide" />
+    </div>
+    <h1>{{ card.name }}</h1>
+  </ng-template>
+</ngb-carousel>
