@@ -15,7 +15,7 @@ export class LoginComponent {
     this.oninit();
   }
   loginForm!: FormGroup;
-  url: string = 'http://localhost:8000/usuarios/login';
+  url: string = 'https://easy-tan-starfish-hem.cyclic.app//usuarios/login';
   id?: string | null;
   token!: string;
   oninit() {

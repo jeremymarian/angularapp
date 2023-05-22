@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class UserDbService {
   constructor(private http: HttpClient) {}
 
-  url: any = 'http://localhost:8000/usuarios';
+  url: any = 'https://easy-tan-starfish-hem.cyclic.app/usuarios';
 
   conectToDb(data: any) {
     const response = this.http.post(this.url, data);
