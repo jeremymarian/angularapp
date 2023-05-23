@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { ChangeDetectorRef, Component,  OnDestroy } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pview',
@@ -11,8 +12,8 @@ export class PviewComponent implements OnDestroy {
 
   title: string = 'My portfolio';
   isNotLoad!: Boolean;
-  isLoad!: Boolean
-
+  isLoad!: Boolean;
+  router!: Router;
   loading(){
     let storg:string|null =localStorage.getItem('id')
     console.log(storg)
@@ -56,6 +57,7 @@ export class PviewComponent implements OnDestroy {
   logout(){
     localStorage.removeItem('id')
     localStorage.removeItem('token')
+    this.router.navigate(['/'])
   }
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {

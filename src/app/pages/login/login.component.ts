@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {Router} from '@angular/router'
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { catchError, Observable, of, throwError } from 'rxjs';
 
@@ -20,6 +21,7 @@ export class LoginComponent {
   token!: string;
   msjloading?: string;
   errormsj?: string;
+  router!:Router;
   oninit() {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
@@ -75,8 +77,8 @@ export class LoginComponent {
     );
 
     setTimeout(()=>{
-      window.location.href = '/cards'
-    }, 5000)
+      this.router.navigate(['/cards'])
+    }, 10000)
   
 
 }
