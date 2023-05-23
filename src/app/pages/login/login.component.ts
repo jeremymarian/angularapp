@@ -15,9 +15,11 @@ export class LoginComponent {
     this.oninit();
   }
   loginForm!: FormGroup;
-  url: string = 'https://easy-tan-starfish-hem.cyclic.app//usuarios/login';
+  url: string = 'https://easy-tan-starfish-hem.cyclic.app/usuarios/login';
   id?: string | null;
   token!: string;
+  msjloading?: string;
+  errormsj?: string;
   oninit() {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
@@ -25,7 +27,10 @@ export class LoginComponent {
     });
   }
   login(form: FormGroup) {
-
+    const loading = true
+    if(loading){
+      this.msjloading = "Loading..."
+    }
     const req = this.http.post(this.url, form.value,{
       'headers': {
           "Content-Type": "application/json",
@@ -34,14 +39,15 @@ export class LoginComponent {
     catchError((error:HttpErrorResponse):Observable<any>=>{
       console.log(error.error.message)
       return throwError(()=> {
-      const err = new Error('error ocurrido', {
+      const err = new Error('usuario y/o contraseña incorrectos', {
       cause: {
         name: 'error',
-        message:'que ocurrio'
+        message:'usuario y/o contraseña incorrectos'
       }
       
       })
       console.log(err.cause)
+      this.errormsj = err.message
       })
  
     })
@@ -56,7 +62,7 @@ export class LoginComponent {
       localStorage.setItem('token', this.token);
       localStorage.setItem('id', this.id as string);
       console.log(this.token, `id: ${this.id}`);
-      const res =  this.http.get(`http://localhost:8000/usuarios/${this.id}`,{
+      const res =  this.http.get(`https://easy-tan-starfish-hem.cyclic.app/usuarios/${this.id}`,{
       'headers': {
           "Content-Type": "application/json",
       }
@@ -68,7 +74,10 @@ export class LoginComponent {
       }
     );
 
-  window.location.href = '/cards'
+    setTimeout(()=>{
+      window.location.href = '/cards'
+    }, 5000)
+  
 
 }
 

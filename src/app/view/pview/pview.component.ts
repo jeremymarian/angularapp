@@ -9,7 +9,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 })
 export class PviewComponent implements OnDestroy {
 
-  title: string = 'Welcome to my portfolio';
+  title: string = 'My portfolio';
   isNotLoad!: Boolean;
   isLoad!: Boolean
 
@@ -52,6 +52,11 @@ export class PviewComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
 
   private _mobileQueryListener: () => void;
+
+  logout(){
+    localStorage.removeItem('id')
+    localStorage.removeItem('token')
+  }
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');

@@ -27,6 +27,13 @@
       </mat-form-field>
       <br />
       <button mat-raised-button type="submit">Log-in</button>
+      <div *ngIf="msjloading || errormsj" [ngClass]="{
+        'loadmsj':msjloading,
+        'errormsj': errormsj}" >
+        {{msjloading}}{{errormsj}}
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        
+      </div>
     </div>
   </form>
 </div>

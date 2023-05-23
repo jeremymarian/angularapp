@@ -6,7 +6,7 @@
     <div class="position-name">
       <h2
         [ngClass]="{
-          'example-app-name': title.includes('Welcome to my portfolio'),
+          'example-app-name': title.includes('portfolio'),
           'example-app-name1': title.includes('Login Section'),
           'example-app-name2': title.includes('Sign up Section'),
           'example-app-name3': title.includes('Cards Section')
@@ -65,6 +65,14 @@
             class="toogle-button">
             <mat-icon>app</mat-icon>
             My cart
+          </mat-button-toggle>
+          <mat-button-toggle
+            *ngIf="isLoad"
+            (click)="logout()"
+            routerLink="/"
+            class="toogle-button">
+            <mat-icon>exit</mat-icon>
+            Logout
           </mat-button-toggle>
         </mat-button-toggle-group>
       </mat-nav-list>

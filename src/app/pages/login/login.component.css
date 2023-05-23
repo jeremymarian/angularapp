@@ -1,8 +1,9 @@
 .loginform{
     width: 50vh;
-    height: 50vh;
+    height: 70vh;
     padding-top: 10vh;
     margin-top: 10px;
+    margin-bottom: 25px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .container {
@@ -25,3 +26,13 @@ bottom: 40px;
     bottom: 50px;
     border-top: 2px solid #999;
 }
+
+.loadmsj{
+    width: 20vh;
+    height: 20vh;
+}
+
+.errormsj{
+    width: 20vh;
+    height: 20vh;
+    color: red;}
