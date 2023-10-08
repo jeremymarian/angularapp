@@ -1,9 +1,10 @@
 .loginform{
-    width: 50vh;
-    height: 70vh;
-    padding-top: 10vh;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 20vh 10vh;
+    margin:20px 0px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .container {
@@ -15,9 +16,12 @@
 }
 
 .logtitle{
-text-align: center;
-position: relative;
-bottom: 40px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 40px;
+    
 }
 
 .solid {

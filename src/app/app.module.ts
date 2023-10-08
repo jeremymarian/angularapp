@@ -1,19 +1,24 @@
 /* eslint-disable prettier/prettier */
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule, } from '@angular/material/core';
-import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MaterialExampleModule } from './material.module';
 import { PviewComponent } from './view/pview/pview.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UserDbService } from './services/user-db.service';
 import {NgOptimizedImage} from '@angular/common';
-import { ResponseTimeoutInterceptor as int } from './interceptors/response-timeout.interceptor';
+import { MainponeComponent } from './pages/mainpone/mainpone.component';
+import { MainptwoComponent } from './pages/mainptwo/mainptwo.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactappComponent } from './pages/reactapp/reactapp.component';
+import { ProyectsComponent } from './pages/proyects/proyects.component';
+
 
 
 
@@ -23,6 +28,10 @@ import { ResponseTimeoutInterceptor as int } from './interceptors/response-timeo
     PviewComponent,
     LoginComponent,
     SignupComponent,
+    MainponeComponent,
+    MainptwoComponent,
+    ReactappComponent,
+    ProyectsComponent
 
  
   ],
@@ -36,13 +45,13 @@ import { ResponseTimeoutInterceptor as int } from './interceptors/response-timeo
     MaterialExampleModule,
     ReactiveFormsModule,
     NgOptimizedImage,
-
-    
-    
- 
-
+    FontAwesomeModule,
   ],
-  providers: [UserDbService,  { provide: HTTP_INTERCEPTORS, useClass: int, multi: true },],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA,
+  ],
+  providers: [UserDbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

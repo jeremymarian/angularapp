@@ -1,6 +1,5 @@
 .slider-width {
     width: 50vh;
-    min-width: auto;
     height: 40vh;
  
 }
@@ -24,4 +23,11 @@ h2{
     align-content: center;
     justify-content: center;
     margin-top: 0;
+}
+
+@media screen and (max-height: 790px){
+
+    .slider-width {
+           width: 100vh;
+}
 }

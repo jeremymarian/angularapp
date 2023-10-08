@@ -12,7 +12,7 @@ import { catchError, Observable, of, throwError } from 'rxjs';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private router:Router) {
     this.oninit();
   }
   loginForm!: FormGroup;
@@ -21,7 +21,6 @@ export class LoginComponent {
   token!: string;
   msjloading?: string;
   errormsj?: string;
-  router!:Router;
   oninit() {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
@@ -60,9 +59,17 @@ export class LoginComponent {
     req.subscribe(data => {
       this.token = data.toLocaleString();
       const helper = new JwtHelperService();
-      this.id = helper.decodeToken(this.token).id
-      localStorage.setItem('token', this.token);
-      localStorage.setItem('id', this.id as string);
+      this.id = helper.decodeToken(this.token).id;
+      setTimeout(()=>{
+        if(!localStorage.getItem('id')){ 
+        localStorage.setItem('token', this.token);
+        localStorage.setItem('id', this.id as string);
+          window.location.href = "/"
+          
+        }
+        
+      }, 3000)
+     
       console.log(this.token, `id: ${this.id}`);
       const res =  this.http.get(`https://easy-tan-starfish-hem.cyclic.app/usuarios/${this.id}`,{
       'headers': {
@@ -75,10 +82,8 @@ export class LoginComponent {
     );
       }
     );
-
-    setTimeout(()=>{
-      this.router.navigate(['/cards'])
-    }, 10000)
+    
+ 
   
 
 }

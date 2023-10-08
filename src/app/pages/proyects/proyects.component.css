@@ -1,0 +1,87 @@
+.example-card {
+    position: relative;
+    top: 200px;
+    width: 300px;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://ionicframework.com/docs/icons/logo-react-icon.png');
+    background-size: cover;
+  }
+
+  .example-header-image1 {
+    background-image: url('https://creazilla-store.fra1.digitaloceanspaces.com/icons/3207469/angular-icon-md.png');
+    background-size: cover;
+  }
+
+  .vcard{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3,100px);
+    justify-content: space-evenly;
+    margin-bottom: 50vh;}
+
+
+
+    @media screen and (min-width: 300px){
+      .vcard{
+        grid-template-columns: repeat(1,1fr);
+      }
+    }
+
+
+@media screen and (min-width: 400px){
+    .vcard{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+  
+  
+  @media screen and (min-width: 500px){
+    .vcard{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+  
+  @media screen and (min-width: 576px) {
+    .vcard{
+      grid-template-columns: repeat(1,1fr);
+    }
+   }
+  
+  
+  @media screen and (min-width: 768px) {
+    .vcard{
+      grid-template-columns: repeat(1,1fr);
+    }   
+  }
+  
+  
+  @media screen and (min-width: 992px) {
+    .vcard{
+      grid-template-columns: repeat(1,1fr);
+    }
+   }
+  
+  
+  @media screen and (min-width: 1200px) {
+    .vcard{
+      grid-template-columns: repeat(2,1fr);
+    }  
+  }
+  
+  
+  @media screen and (min-width: 1400px) { 
+    .vcard{
+      grid-template-columns: repeat(2,1fr);
+    }  
+   }
+   @media screen and (min-width: 1550px) { 
+    .vcard{
+      grid-template-columns: repeat(2,100px);
+      justify-content: space-evenly;
+
+    }  
+   }

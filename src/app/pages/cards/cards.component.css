@@ -1,7 +1,8 @@
 .center {
+margin-top: 100px;
 display: flex;
 justify-content: center;
-padding-bottom: 5vh;
+padding-bottom: 10vh;
 }
 
 .row{
@@ -21,4 +22,14 @@ padding-bottom: 5vh;
     justify-content: center; 
     align-content: center;
    
+}
+
+
+@media screen and (max-height: 790px){
+
+    .center {
+      
+        padding-bottom: 45vh;
+        
+}
 }

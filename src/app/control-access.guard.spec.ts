@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ControlAccessGuard } from './control-access.guard';
+import { ControlAccess } from './control-access.guard';
 
 describe('ControlAccessGuard', () => {
-  let guard: ControlAccessGuard;
+  let guard: ControlAccess;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    guard = TestBed.inject(ControlAccessGuard);
+    guard = TestBed.inject(ControlAccess);
   });
 
   it('should be created', () => {

@@ -1,7 +1,4 @@
-<ngb-carousel
-  class="slider-width"
-  *ngIf="cards"
-  [showNavigationIndicators]="false">
+<ngb-carousel class="slider-width" *ngIf="cards">
   <ng-template *ngFor="let card of cards" ngbSlide>
     <div class="slider-gross">
       <img [lazyLoad]="card.images.small" alt="Random slide" />

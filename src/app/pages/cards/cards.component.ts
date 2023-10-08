@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from 'pokemon-tcg-sdk-typescript/dist/sdk';
+import { Card } from 'pokemon-tcg-sdk-typescript/dist/interfaces/card';
 import * as PokemonTCG from 'pokemon-tcg-sdk-typescript/dist/sdk';
 
 @Component({
@@ -21,7 +21,7 @@ export class CardsComponent implements OnInit {
       console.log(this.loaded);
     });
   }
-  value = 'Seach in Database';
+  value = 'Search in Database';
   cards!: Card[];
   carcards!: Card[];
   loaded: Boolean = false;

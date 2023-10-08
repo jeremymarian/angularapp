@@ -13,7 +13,7 @@ export class ResponseTimeoutInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler,
   ): Observable<HttpEvent<any>> {
-    const timeoutValue = 10000; // Define el tiempo de tolerancia en milisegundos (en este ejemplo, 10 segundos)
+    const timeoutValue = 10000; // Define el tiempo de tolerancia en milisegundos
 
     const modifiedRequest = request.clone({
       setHeaders: {

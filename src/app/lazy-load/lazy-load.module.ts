@@ -1,7 +1,8 @@
-import { ChangeDetectorRef, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VcardComponent } from '../components/vcard/vcard.component';
 import { CarouselComponent } from '../components/carousel/carousel.component';
+import { HttpClientModule } from '@angular/common/http';
 import {
   NgbCarouselConfig,
   NgbCarouselModule,
@@ -22,7 +23,9 @@ import { LazyLoadRoutingModule } from './lazy-load-routing.module';
     ReactiveFormsModule,
     LazyLoadImageModule,
     LazyLoadRoutingModule,
+    HttpClientModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [NgbCarouselConfig],
 })
 export class LazyLoadModule {}

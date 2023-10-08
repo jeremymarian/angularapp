@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+
 .my-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
+
 }
 
 .my-box {
   background-color: #ffffff;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   padding: 20px;
   border-radius: 5px;
-  max-width: 600px;
-  width: 100%;
+  width: 100vh;
+  height: 30vh;
   animation-name: fade-in;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
+  overflow: hidden;
 }
 
 @keyframes fade-in {
@@ -31,17 +34,18 @@
 }
 
 .my-text {
+  margin-top: 35px;
   color: #000000;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  text-align: justify;
+  text-align: center;
 }
 .example-container {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
@@ -148,6 +152,29 @@
         transform: translateX(-50%);
       }
   }
+
+  .example-app-name4{
+    margin-left: 20px;
+    margin-top: 14px;
+    transform: translateX(-200%);
+    opacity: 0;
+    animation: slide-in-animr 1.5s  ease-out forwards ;}
+    @keyframes slide-in-animr {
+      20% {
+        opacity: 0;
+      }
+      60% {
+        transform: translateX(-45%);
+      }
+      75% {
+        transform: translateX(-51%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(-50%);
+      
+      }
+  }
   .example-sidenav-container {
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
@@ -172,10 +199,11 @@ text-align: center;
   }
 
 .my-list {
+  box-shadow: 0px 2px 6px rgba(41, 182, 234, 0.305);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 10px;
 }
@@ -211,20 +239,27 @@ text-align: center;
 
 .principal{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column
 }
-
 .container-heading {
   font-size: 32px;
   font-weight: bold;
   color: #000000;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  animation: moveAnimation 1s infinite alternate;
+
 }
 
-@keyframes moveAnimation {
-  0% { transform: translateX(-10px); }
-  100% { transform: translateX(10px); }
+
+
+ .text-center.p-3{
+
+  height: 20vh;
+}
+
+.bg-light.text-center.text-white{
+z-index: 1;
+box-sizing: content-box;
+width: 100%;
 }
